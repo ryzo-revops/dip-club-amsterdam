@@ -400,9 +400,9 @@
       position: relative;
       z-index: 4;
       background: var(--teal);
-      padding: 28px 0;
-      margin-top: -40px;
-      margin-bottom: -40px;
+      padding: 0;
+      margin-top: -30px;
+      margin-bottom: -30px;
       overflow: hidden;
     }
     .marquee-wave-top {
@@ -434,48 +434,17 @@
     .marquee-track {
       display: flex;
       width: max-content;
-      animation: marquee-scroll 45s linear infinite;
+      animation: marquee-scroll 40s linear infinite;
     }
-    .marquee-content {
-      display: flex;
-      align-items: center;
-      gap: 48px;
-      padding-right: 48px;
+    .marquee-wave-svg {
+      width: 3200px;
+      height: 120px;
       flex-shrink: 0;
-    }
-    .marquee-item {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      color: var(--white);
-      font-family: 'Rokkitt', serif;
-      font-size: 16px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      white-space: nowrap;
-      animation: marquee-wave 5s ease-in-out infinite;
-    }
-    .marquee-item:nth-child(1) { animation-delay: 0s; }
-    .marquee-item:nth-child(2) { animation-delay: -0.625s; }
-    .marquee-item:nth-child(3) { animation-delay: -1.25s; }
-    .marquee-item:nth-child(4) { animation-delay: -1.875s; }
-    .marquee-item:nth-child(5) { animation-delay: -2.5s; }
-    .marquee-item:nth-child(6) { animation-delay: -3.125s; }
-    .marquee-item:nth-child(7) { animation-delay: -3.75s; }
-    .marquee-item:nth-child(8) { animation-delay: -4.375s; }
-    .marquee-item svg {
-      width: 22px;
-      height: 22px;
-      flex-shrink: 0;
+      overflow: visible;
     }
     @keyframes marquee-scroll {
       0% { transform: translateX(0); }
       100% { transform: translateX(-50%); }
-    }
-    @keyframes marquee-wave {
-      0%, 100% { transform: translateY(-10px); }
-      50% { transform: translateY(10px); }
     }
 
     /* ===== PILLARS / WHAT WE DO ===== */
@@ -1241,7 +1210,7 @@
     </div>
   </header>
 
-  <!-- ===== ORANGE MARQUEE STRIP ===== -->
+  <!-- ===== WAVY MARQUEE STRIP ===== -->
   <div class="marquee-strip" aria-hidden="true">
     <div class="marquee-wave-top">
       <svg viewBox="0 0 1440 40" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
@@ -1254,26 +1223,22 @@
       </svg>
     </div>
     <div class="marquee-track">
-      <div class="marquee-content">
-        <span class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M8 12l2 2 4-4"/></svg>Free Weekly Events</span>
-        <span class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 000-7.78z"/></svg>Cold Water Therapy</span>
-        <span class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>200+ Members</span>
-        <span class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 00-6 0v4"/><path d="M2 12a2 2 0 012-2h16a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2v-6z"/></svg>Seek Discomfort</span>
-        <span class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v6m0 0l3-3m-3 3L9 5"/><path d="M4.93 10.93l4.24 4.24"/><path d="M2 18h6"/><path d="M14.83 15.17l4.24-4.24"/><path d="M16 22h6"/></svg>Breathwork</span>
-        <span class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Amsterdam</span>
-        <span class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>All Levels Welcome</span>
-        <span class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Every Saturday</span>
-      </div>
-      <div class="marquee-content">
-        <span class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M8 12l2 2 4-4"/></svg>Free Weekly Events</span>
-        <span class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 000-7.78z"/></svg>Cold Water Therapy</span>
-        <span class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>200+ Members</span>
-        <span class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 00-6 0v4"/><path d="M2 12a2 2 0 012-2h16a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2v-6z"/></svg>Seek Discomfort</span>
-        <span class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v6m0 0l3-3m-3 3L9 5"/><path d="M4.93 10.93l4.24 4.24"/><path d="M2 18h6"/><path d="M14.83 15.17l4.24-4.24"/><path d="M16 22h6"/></svg>Breathwork</span>
-        <span class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Amsterdam</span>
-        <span class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>All Levels Welcome</span>
-        <span class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Every Saturday</span>
-      </div>
+      <svg class="marquee-wave-svg" viewBox="0 0 3200 120" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <path id="wave-a" d="M0,60 Q200,15 400,60 Q600,105 800,60 Q1000,15 1200,60 Q1400,105 1600,60 Q1800,15 2000,60 Q2200,105 2400,60 Q2600,15 2800,60 Q3000,105 3200,60" fill="none"/>
+        </defs>
+        <text fill="white" font-family="'Rokkitt', serif" font-size="20" font-weight="700" letter-spacing="3">
+          <textPath href="#wave-a">&#x2726; FREE WEEKLY EVENTS &#x2726; COLD WATER THERAPY &#x2726; 200+ MEMBERS &#x2726; SEEK DISCOMFORT &#x2726; BREATHWORK &#x2726; AMSTERDAM &#x2726; ALL LEVELS WELCOME &#x2726; EVERY SATURDAY &#x2726; FREE WEEKLY EVENTS &#x2726; COLD WATER THERAPY &#x2726; 200+ MEMBERS &#x2726; SEEK DISCOMFORT &#x2726; BREATHWORK &#x2726; AMSTERDAM &#x2726; ALL LEVELS WELCOME &#x2726; EVERY SATURDAY</textPath>
+        </text>
+      </svg>
+      <svg class="marquee-wave-svg" viewBox="0 0 3200 120" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <path id="wave-b" d="M0,60 Q200,15 400,60 Q600,105 800,60 Q1000,15 1200,60 Q1400,105 1600,60 Q1800,15 2000,60 Q2200,105 2400,60 Q2600,15 2800,60 Q3000,105 3200,60" fill="none"/>
+        </defs>
+        <text fill="white" font-family="'Rokkitt', serif" font-size="20" font-weight="700" letter-spacing="3">
+          <textPath href="#wave-b">&#x2726; FREE WEEKLY EVENTS &#x2726; COLD WATER THERAPY &#x2726; 200+ MEMBERS &#x2726; SEEK DISCOMFORT &#x2726; BREATHWORK &#x2726; AMSTERDAM &#x2726; ALL LEVELS WELCOME &#x2726; EVERY SATURDAY &#x2726; FREE WEEKLY EVENTS &#x2726; COLD WATER THERAPY &#x2726; 200+ MEMBERS &#x2726; SEEK DISCOMFORT &#x2726; BREATHWORK &#x2726; AMSTERDAM &#x2726; ALL LEVELS WELCOME &#x2726; EVERY SATURDAY</textPath>
+        </text>
+      </svg>
     </div>
   </div>
 
