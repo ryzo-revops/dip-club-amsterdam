@@ -395,16 +395,41 @@
       0%, 100% { transform: translateX(-50%) translateY(0); }
       50% { transform: translateX(-50%) translateY(10px); }
     }
-    /* ===== ORANGE MARQUEE STRIP ===== */
+    /* ===== BLUE WAVY MARQUEE STRIP ===== */
     .marquee-strip {
       position: relative;
       z-index: 4;
-      background: var(--cta-orange);
-      padding: 18px 0;
-      transform: rotate(-2deg) scale(1.08);
-      margin-top: -28px;
-      margin-bottom: -28px;
+      background: var(--teal);
+      padding: 28px 0;
+      margin-top: -40px;
+      margin-bottom: -40px;
       overflow: hidden;
+    }
+    .marquee-wave-top {
+      position: absolute;
+      top: -1px;
+      left: 0;
+      width: 100%;
+      z-index: 2;
+      line-height: 0;
+    }
+    .marquee-wave-top svg {
+      display: block;
+      width: 100%;
+      height: 40px;
+    }
+    .marquee-wave-bottom {
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 100%;
+      z-index: 2;
+      line-height: 0;
+    }
+    .marquee-wave-bottom svg {
+      display: block;
+      width: 100%;
+      height: 40px;
     }
     .marquee-track {
       display: flex;
@@ -429,7 +454,16 @@
       text-transform: uppercase;
       letter-spacing: 0.06em;
       white-space: nowrap;
+      animation: marquee-wave 5s ease-in-out infinite;
     }
+    .marquee-item:nth-child(1) { animation-delay: 0s; }
+    .marquee-item:nth-child(2) { animation-delay: -0.625s; }
+    .marquee-item:nth-child(3) { animation-delay: -1.25s; }
+    .marquee-item:nth-child(4) { animation-delay: -1.875s; }
+    .marquee-item:nth-child(5) { animation-delay: -2.5s; }
+    .marquee-item:nth-child(6) { animation-delay: -3.125s; }
+    .marquee-item:nth-child(7) { animation-delay: -3.75s; }
+    .marquee-item:nth-child(8) { animation-delay: -4.375s; }
     .marquee-item svg {
       width: 22px;
       height: 22px;
@@ -438,6 +472,10 @@
     @keyframes marquee-scroll {
       0% { transform: translateX(0); }
       100% { transform: translateX(-50%); }
+    }
+    @keyframes marquee-wave {
+      0%, 100% { transform: translateY(-10px); }
+      50% { transform: translateY(10px); }
     }
 
     /* ===== PILLARS / WHAT WE DO ===== */
@@ -1205,6 +1243,16 @@
 
   <!-- ===== ORANGE MARQUEE STRIP ===== -->
   <div class="marquee-strip" aria-hidden="true">
+    <div class="marquee-wave-top">
+      <svg viewBox="0 0 1440 40" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,20 C180,0 360,40 540,20 C720,0 900,40 1080,20 C1260,0 1440,40 1440,20 L1440,0 L0,0 Z" fill="#FFFFFF"/>
+      </svg>
+    </div>
+    <div class="marquee-wave-bottom">
+      <svg viewBox="0 0 1440 40" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,20 C180,40 360,0 540,20 C720,40 900,0 1080,20 C1260,40 1440,0 1440,20 L1440,40 L0,40 Z" fill="#F8F9FA"/>
+      </svg>
+    </div>
     <div class="marquee-track">
       <div class="marquee-content">
         <span class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M8 12l2 2 4-4"/></svg>Free Weekly Events</span>
