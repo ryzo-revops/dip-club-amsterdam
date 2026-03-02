@@ -12,7 +12,7 @@
   <link rel="preload" href="TAN-Tangkiwood-Regular.otf" as="font" type="font/otf" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Inter:opsz,wght@14..32,800&family=Rokkitt:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Inter:opsz,wght@14..32,800&family=Rokkitt:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   <style>
     /* ===== FONT FACE ===== */
     @font-face {
@@ -558,6 +558,7 @@
       position: absolute;
       background: var(--white);
       padding: 12px 12px 40px;
+      border-radius: 8px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.15), 0 1px 4px rgba(0,0,0,0.1);
       transition: transform 0.4s var(--ease);
     }
@@ -568,6 +569,7 @@
       overflow: hidden;
       width: 220px;
       height: 180px;
+      border-radius: 4px;
     }
     @media (min-width: 768px) {
       .polaroid-frame {
@@ -581,9 +583,9 @@
       object-fit: cover;
     }
     .polaroid-caption {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-style: italic;
-      font-size: 14px;
+      font-family: 'Caveat', cursive;
+      font-size: 17px;
+      font-weight: 500;
       color: var(--slate);
       text-align: center;
       margin-top: 10px;
@@ -1102,6 +1104,7 @@
       position: absolute;
       background: var(--white);
       padding: 8px 8px 28px;
+      border-radius: 8px;
       box-shadow: 0 4px 24px rgba(0,0,0,0.25);
       transition: transform 0.5s var(--ease);
       z-index: 3;
@@ -1110,6 +1113,7 @@
       overflow: hidden;
       width: 180px;
       height: 140px;
+      border-radius: 4px;
     }
     .cta-polaroid-frame img {
       width: 100%;
@@ -1117,22 +1121,29 @@
       object-fit: cover;
     }
     .cta-polaroid-caption {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-style: italic;
-      font-size: 12px;
+      font-family: 'Caveat', cursive;
+      font-size: 15px;
+      font-weight: 500;
       color: var(--slate);
       text-align: center;
       margin-top: 8px;
     }
     .cta-polaroid-left {
-      left: 4%;
+      left: 3%;
       top: 50%;
-      transform: rotate(-8deg) translateY(-50%);
+      transform: rotate(-7deg) translateY(-50%);
     }
-    .cta-polaroid-right {
-      right: 4%;
-      top: 50%;
-      transform: rotate(6deg) translateY(-50%);
+    .cta-polaroid-right-1 {
+      right: 5%;
+      top: 38%;
+      transform: rotate(5deg) translateY(-50%);
+      z-index: 3;
+    }
+    .cta-polaroid-right-2 {
+      right: 2%;
+      top: 62%;
+      transform: rotate(-3deg) translateY(-50%);
+      z-index: 4;
     }
     @media (max-width: 1024px) {
       .cta-polaroid { display: none; }
@@ -1156,9 +1167,18 @@
       transform: rotate(15deg) scaleX(-1);
       opacity: 0.6;
     }
+    .cta-doodle-whale {
+      width: 110px;
+      left: 50%;
+      margin-left: -55px;
+      bottom: 8%;
+      opacity: 0.5;
+      transform: rotate(3deg);
+    }
     @media (max-width: 767px) {
       .cta-doodle-1 { width: 48px; left: 3%; bottom: 8%; }
       .cta-doodle-2 { width: 40px; right: 3%; top: 10%; }
+      .cta-doodle-whale { width: 70px; margin-left: -35px; bottom: 5%; }
     }
 
     /* ===== FOOTER ===== */
@@ -1292,7 +1312,7 @@
   <!-- ===== HERO ===== -->
   <header class="hero" id="hero">
     <div class="hero-bg">
-      <img src="Media/Dutch%20Winter%20Pond%20Swim%202.png" alt="Group of people laughing and embracing cold water together in Amsterdam" width="1920" height="1080" fetchpriority="high">
+      <img src="Media/dc-hero-image-website.png" alt="Group of people laughing and embracing cold water together in Amsterdam" width="1920" height="1080" fetchpriority="high">
     </div>
     <div class="hero-grain" aria-hidden="true"></div>
     <div class="container hero-content">
@@ -1348,21 +1368,21 @@
         <div class="community-polaroids reveal">
           <div class="polaroid polaroid-1">
             <div class="polaroid-frame">
-              <img src="Media/210c252b-75e3-4b71-aa87-6ed6473963d6.JPG" alt="Community members swimming together in an Amsterdam canal" width="500" height="400" loading="lazy">
+              <img src="Media/dc-polaroid-1-amstel-dip.JPG" alt="Dip Club members swimming in the Amstel river" width="500" height="400" loading="lazy">
             </div>
-            <p class="polaroid-caption">Canal dip, Amsterdam</p>
+            <p class="polaroid-caption">Amstel dip</p>
           </div>
           <div class="polaroid polaroid-2">
             <div class="polaroid-frame">
-              <img src="Media/IMG_4370.jpg" alt="Group of friends on a mountain adventure in the Dolomites" width="500" height="400" loading="lazy">
+              <img src="Media/dc-polaroid-2-dolomites-hike.jpg" alt="Group hiking through the Dolomites mountains" width="500" height="400" loading="lazy">
             </div>
-            <p class="polaroid-caption">Mountain crew, Dolomites</p>
+            <p class="polaroid-caption">Dolomites hike</p>
           </div>
           <div class="polaroid polaroid-3">
             <div class="polaroid-frame">
-              <img src="Media/IMG_5746.jpg" alt="Dip Club members enjoying an outdoor adventure together" width="500" height="400" loading="lazy">
+              <img src="Media/dc-polaroid-3-south-africa-hike.jpg" alt="Dip Club adventure hiking in South Africa" width="500" height="400" loading="lazy">
             </div>
-            <p class="polaroid-caption">Cold water crew</p>
+            <p class="polaroid-caption">South Africa hike</p>
           </div>
         </div>
         <div class="community-content reveal">
@@ -1538,7 +1558,7 @@
       </svg>
     </div>
     <div class="quote-banner-bg">
-      <img src="Media/quote-background.jpg" alt="Two swimmers in the open ocean" width="1920" height="1080" loading="lazy">
+      <img src="Media/dc-quote-background.jpg" alt="Two swimmers in the open ocean" width="1920" height="1080" loading="lazy">
     </div>
     <div class="quote-doodles" aria-hidden="true">
       <!-- Snowflake / ice crystal -->
@@ -1703,19 +1723,26 @@
     <!-- CTA Polaroids -->
     <div class="cta-polaroid cta-polaroid-left" aria-hidden="true">
       <div class="cta-polaroid-frame">
-        <img src="Media/IMG_2949.jpg" alt="Dip Club community moment" width="360" height="280" loading="lazy">
+        <img src="Media/dc-polaroid-4-dolomites-hike.jpg" alt="Dip Club Dolomites hike" width="360" height="280" loading="lazy">
       </div>
-      <p class="cta-polaroid-caption">Ice bath day</p>
+      <p class="cta-polaroid-caption">Dolomites hike</p>
     </div>
-    <div class="cta-polaroid cta-polaroid-right" aria-hidden="true">
+    <div class="cta-polaroid cta-polaroid-right-1" aria-hidden="true">
       <div class="cta-polaroid-frame">
-        <img src="Media/IMG_8585.jpg" alt="Dip Club outdoor adventure" width="360" height="280" loading="lazy">
+        <img src="Media/dc-polaroid-5-amsterdam-dip-spot.jpg" alt="Dip Club Amsterdam dip spot" width="360" height="280" loading="lazy">
       </div>
-      <p class="cta-polaroid-caption">Adventure time</p>
+      <p class="cta-polaroid-caption">Amsterdam dip spot</p>
+    </div>
+    <div class="cta-polaroid cta-polaroid-right-2" aria-hidden="true">
+      <div class="cta-polaroid-frame">
+        <img src="Media/dc-polaroid-6-amstel-dip-flip.jpg" alt="Amstel dip backflip" width="360" height="280" loading="lazy">
+      </div>
+      <p class="cta-polaroid-caption">Amstel dip flip</p>
     </div>
     <!-- Sea doodles -->
     <img class="cta-doodle cta-doodle-1" src="Media/Asset%201.svg" alt="" aria-hidden="true" loading="lazy">
-    <img class="cta-doodle cta-doodle-2" src="Media/Asset%202.svg" alt="" aria-hidden="true" loading="lazy">
+    <img class="cta-doodle cta-doodle-2" src="Media/Asset%201.svg" alt="" aria-hidden="true" loading="lazy">
+    <img class="cta-doodle cta-doodle-whale" src="Media/dc-whale-white.svg" alt="" aria-hidden="true" loading="lazy">
     <div class="container">
       <div class="reveal">
         <h2 id="cta-heading">Get out of your head</h2>
