@@ -939,13 +939,96 @@
       padding: 96px 0;
       background: var(--light);
     }
-    .luma-embed-wrapper {
+    .event-card {
       max-width: 720px;
       margin: 0 auto;
+      background: var(--white);
+      border: 2px solid rgba(0,0,0,0.1);
+      border-radius: var(--radius-md);
+      padding: 32px;
+      display: flex;
+      gap: 28px;
+      align-items: flex-start;
+      transition: transform 0.4s var(--ease), border-color 0.4s var(--ease);
+      text-decoration: none;
+      color: inherit;
     }
-    .luma-embed-wrapper iframe {
-      width: 100%;
-      display: block;
+    .event-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--teal);
+    }
+    .event-date-badge {
+      flex-shrink: 0;
+      width: 72px;
+      text-align: center;
+      background: var(--teal);
+      color: var(--white);
+      border-radius: 12px;
+      padding: 12px 8px;
+    }
+    .event-date-badge .month {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .event-date-badge .day {
+      font-family: 'TAN Tangkiwood', 'Inter', system-ui, sans-serif;
+      font-size: 32px;
+      line-height: 1.1;
+    }
+    .event-info h3 {
+      font-family: 'TAN Tangkiwood', 'Inter', system-ui, sans-serif;
+      font-size: 20px;
+      font-weight: normal;
+      color: #1a1a1a;
+      margin-bottom: 8px;
+    }
+    .event-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 12px;
+      font-size: 14px;
+      color: var(--slate);
+    }
+    .event-meta span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .event-info p {
+      font-size: 15px;
+      color: var(--slate);
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+    .event-cta {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--teal);
+    }
+    @media (max-width: 600px) {
+      .event-card { flex-direction: column; gap: 20px; padding: 24px; }
+      .event-date-badge { width: auto; display: inline-flex; gap: 8px; padding: 8px 16px; align-items: baseline; }
+    }
+    .event-empty {
+      max-width: 720px;
+      margin: 0 auto;
+      border: 2px solid rgba(0,0,0,0.15);
+      border-radius: var(--radius-md);
+      padding: 64px 32px;
+      text-align: center;
+      background-color: var(--white);
+      background-image: url("data:image/svg+xml,%3Csvg width='120' height='20' viewBox='0 0 120 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 10 Q15 0 30 10 Q45 20 60 10 Q75 0 90 10 Q105 20 120 10' fill='none' stroke='%23e8e8e8' stroke-width='1'/%3E%3C/svg%3E");
+      background-size: 120px 20px;
+      display: none;
+    }
+    .event-empty p {
+      font-size: 16px;
+      color: var(--slate);
     }
 
     /* ===== FINAL CTA ===== */
@@ -1497,19 +1580,33 @@
         <h2 id="events-heading">What's next?</h2>
         <p>Check out our upcoming sessions and sign up directly. Spots are limited!</p>
       </div>
-      <div class="luma-embed-wrapper reveal">
-        <iframe
-          src="https://lu.ma/embed/event/nnsgdhwe"
-          width="100%"
-          height="500"
-          frameborder="0"
-          style="border-radius: 16px; border: 1px solid rgba(0,0,0,0.1);"
-          loading="lazy"
-          title="Upcoming Dip Club event on Luma">
-        </iframe>
-      </div>
-      <div style="text-align: center; margin-top: 32px;" class="reveal">
-        <a href="https://luma.com/dipclub.ams" target="_blank" rel="noopener" class="btn btn-primary">View all planned events &rarr;</a>
+      <a href="https://luma.com/nnsgdhwe" target="_blank" rel="noopener" class="event-card reveal">
+        <div class="event-date-badge">
+          <div class="month">Mar</div>
+          <div class="day">7</div>
+        </div>
+        <div class="event-info">
+          <h3>Sauna + Icebath + Italy Blue Zone Longevity Food Cooking Show & Tasting</h3>
+          <div class="event-meta">
+            <span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              17:00 – 19:00
+            </span>
+            <span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              LUCA | Boutique Wellness, Amsterdam
+            </span>
+            <span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+              &euro;47
+            </span>
+          </div>
+          <p>Guided breathing, ice bath immersion, sauna, live cooking demo with Blue Zone food tasting & Sardinian wine.</p>
+          <span class="event-cta">View event & register &rarr;</span>
+        </div>
+      </a>
+      <div class="event-empty reveal">
+        <p>Currently no upcoming events</p>
       </div>
     </div>
   </section>
