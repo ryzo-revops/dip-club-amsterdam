@@ -20,7 +20,7 @@ One-page marketing website for Dip Club Amsterdam - an urban wellness community 
 5. Enable automatic deployments on push to main
 
 ### Environment Variables (if needed)
-- WHATSAPP_GROUP_LINK=https://chat.whatsapp.com/EJdZ0FDo1z0IkM9ayWujVo?mode=gi_t
+- WHATSAPP_GROUP_LINK=https://chat.whatsapp.com/Hgi483zWWtQ3XWt0dBnfnl
 - INSTAGRAM_HANDLE=https://www.instagram.com/dipclub.ams/
 - CONTACT_EMAIL=hello@dipclub.nl
 
