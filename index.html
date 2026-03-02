@@ -1141,27 +1141,24 @@
     .cta-doodle {
       position: absolute;
       z-index: 2;
-      opacity: 1;
     }
-    .cta-doodle-fish1 {
+    .cta-doodle-1 {
+      width: 80px;
+      left: 6%;
+      bottom: 14%;
+      transform: rotate(-12deg);
+      opacity: 0.7;
+    }
+    .cta-doodle-2 {
       width: 64px;
-      left: 8%;
-      bottom: 15%;
-    }
-    .cta-doodle-fish2 {
-      width: 52px;
-      right: 12%;
-      top: 18%;
-    }
-    .cta-doodle-whale {
-      width: 96px;
-      right: 6%;
-      bottom: 20%;
+      right: 8%;
+      top: 16%;
+      transform: rotate(15deg) scaleX(-1);
+      opacity: 0.6;
     }
     @media (max-width: 767px) {
-      .cta-doodle-fish1 { width: 40px; left: 4%; bottom: 10%; }
-      .cta-doodle-fish2 { width: 36px; right: 4%; top: 12%; }
-      .cta-doodle-whale { width: 60px; right: 2%; bottom: 12%; }
+      .cta-doodle-1 { width: 48px; left: 3%; bottom: 8%; }
+      .cta-doodle-2 { width: 40px; right: 3%; top: 10%; }
     }
 
     /* ===== FOOTER ===== */
@@ -1717,26 +1714,8 @@
       <p class="cta-polaroid-caption">Adventure time</p>
     </div>
     <!-- Sea doodles -->
-    <svg class="cta-doodle cta-doodle-fish1" viewBox="0 0 80 40" fill="rgba(255,255,255,0.15)" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-      <ellipse cx="35" cy="20" rx="22" ry="12"/>
-      <path d="M57 20 L72 8 L72 32 Z" fill="rgba(255,255,255,0.15)"/>
-      <circle cx="24" cy="17" r="2.5" fill="white" stroke="none"/>
-      <path d="M30 22 Q35 26 40 22" fill="none"/>
-    </svg>
-    <svg class="cta-doodle cta-doodle-fish2" viewBox="0 0 70 36" fill="rgba(255,255,255,0.12)" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-      <ellipse cx="30" cy="18" rx="18" ry="10"/>
-      <path d="M48 18 L62 8 L62 28 Z" fill="rgba(255,255,255,0.12)"/>
-      <circle cx="22" cy="15" r="2" fill="white" stroke="none"/>
-      <path d="M14 20 Q18 14 22 20" fill="none"/>
-    </svg>
-    <svg class="cta-doodle cta-doodle-whale" viewBox="0 0 120 64" fill="rgba(255,255,255,0.1)" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-      <path d="M20 38 Q6 38 6 28 Q6 14 30 10 Q50 2 80 10 Q100 16 105 28 Q108 38 90 40 L70 40" fill="rgba(255,255,255,0.1)"/>
-      <path d="M70 40 Q60 40 55 44 Q50 48 40 48 Q30 48 20 38"/>
-      <circle cx="28" cy="24" r="3" fill="white" stroke="none"/>
-      <path d="M50 32 Q58 28 66 32" fill="none"/>
-      <path d="M105 28 Q112 20 118 10" fill="none"/>
-      <path d="M105 28 Q114 24 118 18" fill="none"/>
-    </svg>
+    <img class="cta-doodle cta-doodle-1" src="Media/Asset%201.svg" alt="" aria-hidden="true" loading="lazy">
+    <img class="cta-doodle cta-doodle-2" src="Media/Asset%202.svg" alt="" aria-hidden="true" loading="lazy">
     <div class="container">
       <div class="reveal">
         <h2 id="cta-heading">Get out of your head</h2>
