@@ -40,7 +40,7 @@ export default function Hero({
 
   return (
     <section
-      className={`bg-terracotta ${
+      className={`bg-terracotta overflow-visible relative z-10 ${
         fullHeight ? "min-h-screen" : "min-h-[60vh]"
       }`}
     >
@@ -99,7 +99,7 @@ export default function Hero({
 
           {/* Right: photo mosaic or single image */}
           {photos && photos.length > 0 ? (
-            <div className="lg:flex-1">
+            <div className="lg:flex-1 -mb-24 sm:-mb-32 lg:-mb-40 relative z-20">
               <HeroMosaic photos={photos} />
             </div>
           ) : imageSrc ? (

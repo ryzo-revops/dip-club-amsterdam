@@ -22,11 +22,14 @@ export default function Home() {
           { src: "/media/dc-biweekly-dip.jpg", alt: "Monthly cold water dip" },
           { src: "/media/dc-quarterly-excursion.JPG", alt: "Weekend excursion" },
           { src: "/media/dc-annual-adventure-2.JPG", alt: "Annual adventure hike" },
+          { src: "/media/dc-polaroid-4-dolomites-hike.jpg", alt: "Mountain trail in the Dolomites" },
+          { src: "/media/dc-hero-image-website.png", alt: "Dip Club community" },
+          { src: "/media/dc-polaroid-3-south-africa-hike.jpg", alt: "Coastal hike" },
         ]}
       />
 
-      {/* Intro Section */}
-      <section className="bg-offwhite py-24 lg:py-32">
+      {/* Intro Section — extra top padding to accommodate mosaic overflow */}
+      <section className="bg-offwhite pt-36 sm:pt-44 lg:pt-52 pb-24 lg:pb-32">
         <div className="mx-auto max-w-[1320px] px-6 lg:px-12">
           <div className="flex flex-col gap-12 lg:flex-row lg:items-center lg:gap-20">
             <ScrollReveal className="flex-1">
