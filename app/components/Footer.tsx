@@ -51,6 +51,12 @@ export default function Footer() {
             <Link href="/" className="text-2xl font-medium text-white/70 hover:text-white transition-colors">
               Home
             </Link>
+            <Link href="/about" className="text-2xl font-medium text-white/70 hover:text-white transition-colors">
+              About
+            </Link>
+            <Link href="/manifesto" className="text-2xl font-medium text-white/70 hover:text-white transition-colors">
+              Manifesto
+            </Link>
             <Link href="/dips" className="text-2xl font-medium text-white/70 hover:text-white transition-colors">
               Dips
             </Link>
@@ -59,6 +65,9 @@ export default function Footer() {
             </Link>
             <Link href="/adventures" className="text-2xl font-medium text-white/70 hover:text-white transition-colors">
               Adventures
+            </Link>
+            <Link href="/contact" className="text-2xl font-medium text-white/70 hover:text-white transition-colors">
+              Contact
             </Link>
           </nav>
         </div>

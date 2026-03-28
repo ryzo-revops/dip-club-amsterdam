@@ -1,15 +1,22 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 
-const NAV_LINKS = [
-  { label: "Home", href: "/" },
+const ACTIVITY_LINKS = [
   { label: "Dips", href: "/dips" },
   { label: "Excursions", href: "/excursions" },
   { label: "Adventures", href: "/adventures" },
+];
+
+const NAV_LINKS = [
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Manifesto", href: "/manifesto" },
+  { label: "Activities", href: "/dips", children: ACTIVITY_LINKS },
+  { label: "Contact", href: "/contact" },
 ];
 
 const WHATSAPP_URL = "https://chat.whatsapp.com/Hgi483zWWtQ3XWt0dBnfnl";
@@ -18,35 +25,43 @@ export default function Navbar() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
-  // Scroll detection
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 60);
-    };
-    handleScroll(); // run on mount
+    const handleScroll = () => setScrolled(window.scrollY > 60);
+    handleScroll();
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close mobile menu on route change
   useEffect(() => {
     setMenuOpen(false);
+    setDropdownOpen(false);
   }, [pathname]);
 
-  // Lock body scroll when mobile menu is open
   useEffect(() => {
     if (menuOpen) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "";
     }
-    return () => {
-      document.body.style.overflow = "";
-    };
+    return () => { document.body.style.overflow = ""; };
   }, [menuOpen]);
 
+  // Close dropdown on outside click
+  useEffect(() => {
+    const handleClick = (e: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+        setDropdownOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClick);
+    return () => document.removeEventListener("mousedown", handleClick);
+  }, []);
+
   const isTransparent = !scrolled && !menuOpen;
+  const isActivityPage = ["/dips", "/excursions", "/adventures"].includes(pathname);
 
   return (
     <>
@@ -60,7 +75,6 @@ export default function Navbar() {
       >
         <div className="max-w-[1320px] mx-auto px-6 lg:px-12">
           <div className="flex items-center justify-between py-5">
-            {/* Logo */}
             <Link href="/" className="flex-shrink-0">
               <Image
                 src={
@@ -76,10 +90,74 @@ export default function Navbar() {
               />
             </Link>
 
-            {/* Desktop nav links */}
+            {/* Desktop nav */}
             <div className="hidden md:flex items-center gap-8">
               {NAV_LINKS.map((link) => {
-                const isActive = pathname === link.href;
+                const isActive = link.children
+                  ? isActivityPage
+                  : pathname === link.href;
+
+                if (link.children) {
+                  return (
+                    <div key={link.label} ref={dropdownRef} className="relative">
+                      <button
+                        onClick={() => setDropdownOpen((v) => !v)}
+                        className={[
+                          "text-sm font-medium transition-colors duration-200 relative pb-0.5 flex items-center gap-1",
+                          isTransparent
+                            ? "text-white hover:text-white/80"
+                            : "text-dark hover:text-terracotta",
+                          isActive
+                            ? [
+                                "after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:rounded-sm",
+                                isTransparent ? "after:bg-white" : "after:bg-terracotta",
+                              ].join(" ")
+                            : "",
+                        ].join(" ")}
+                      >
+                        {link.label}
+                        <svg
+                          width="12"
+                          height="12"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2.5"
+                          className={`transition-transform duration-200 ${dropdownOpen ? "rotate-180" : ""}`}
+                        >
+                          <path d="M6 9l6 6 6-6" />
+                        </svg>
+                      </button>
+
+                      {/* Dropdown */}
+                      <div
+                        className={[
+                          "absolute top-full left-1/2 -translate-x-1/2 mt-3 min-w-[160px] border border-dark/10 rounded-sm overflow-hidden transition-all duration-200",
+                          scrolled ? "bg-white" : "bg-[#e8e5e2]",
+                          dropdownOpen
+                            ? "opacity-100 translate-y-0 pointer-events-auto"
+                            : "opacity-0 -translate-y-2 pointer-events-none",
+                        ].join(" ")}
+                      >
+                        {link.children.map((child) => (
+                          <Link
+                            key={child.href}
+                            href={child.href}
+                            className={[
+                              "block px-5 py-3 text-sm font-medium transition-colors",
+                              pathname === child.href
+                                ? "text-terracotta"
+                                : "text-dark hover:text-terracotta hover:bg-dark/5",
+                            ].join(" ")}
+                          >
+                            {child.label}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  );
+                }
+
                 return (
                   <Link
                     key={link.href}
@@ -102,7 +180,6 @@ export default function Navbar() {
                 );
               })}
 
-              {/* WhatsApp CTA */}
               <a
                 href={WHATSAPP_URL}
                 target="_blank"
@@ -150,30 +227,47 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* Mobile full-screen overlay menu */}
+      {/* Mobile overlay */}
       <div
         className={[
-          "fixed inset-0 z-40 bg-white flex flex-col items-center justify-center transition-all duration-300 md:hidden",
+          "fixed inset-0 z-40 bg-[#e8e5e2] flex flex-col items-center justify-center transition-all duration-300 md:hidden",
           menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none",
         ].join(" ")}
       >
-        <nav className="flex flex-col items-center gap-8">
+        <nav className="flex flex-col items-center gap-6">
           {NAV_LINKS.map((link) => {
-            const isActive = pathname === link.href;
+            if (link.children) {
+              return (
+                <div key={link.label} className="flex flex-col items-center gap-3">
+                  <span className="text-2xl font-semibold text-dark/50">{link.label}</span>
+                  {link.children.map((child) => (
+                    <Link
+                      key={child.href}
+                      href={child.href}
+                      className={[
+                        "text-xl font-medium transition-colors duration-200",
+                        pathname === child.href ? "text-terracotta" : "text-dark hover:text-terracotta",
+                      ].join(" ")}
+                    >
+                      {child.label}
+                    </Link>
+                  ))}
+                </div>
+              );
+            }
             return (
               <Link
                 key={link.href}
                 href={link.href}
                 className={[
-                  "text-3xl font-semibold transition-colors duration-200",
-                  isActive ? "text-terracotta" : "text-dark hover:text-terracotta",
+                  "text-2xl font-semibold transition-colors duration-200",
+                  pathname === link.href ? "text-terracotta" : "text-dark hover:text-terracotta",
                 ].join(" ")}
               >
                 {link.label}
               </Link>
             );
           })}
-
           <a
             href={WHATSAPP_URL}
             target="_blank"
