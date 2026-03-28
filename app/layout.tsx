@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { DM_Sans, Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
@@ -39,6 +40,7 @@ export default function RootLayout({
       <body>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
