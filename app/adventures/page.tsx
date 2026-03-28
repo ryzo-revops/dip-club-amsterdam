@@ -7,17 +7,17 @@ import WaveDivider from "../components/WaveDivider";
 export const metadata: Metadata = {
   title: "Adventures — Dip Club Amsterdam",
   description:
-    "Once-a-year multi-day international trips across Europe. Up to 12 days of intensive hiking, bonding, and unforgettable experiences.",
+    "Once-a-year long-distance hikes across Europe. Up to 12 days of trails, mountain passes, and unforgettable landscapes.",
 };
 
 export default function AdventuresPage() {
   return (
     <>
       {/* Hero */}
-      <Hero title="ADVENTURES" subtitle="The flagship experience" badge="Once a year" />
+      <Hero title="ADVENTURES" subtitle="Long-distance hikes across Europe" badge="Once a year" />
 
       {/* Overview section 1 — Text left, Image right */}
-      <section className="bg-white py-24 lg:py-32">
+      <section className="bg-offwhite py-24 lg:py-32">
         <div className="mx-auto max-w-[1320px] px-6 lg:px-12">
           <div className="flex flex-col gap-12 lg:flex-row lg:items-center lg:gap-20">
             {/* Left: text */}
@@ -26,24 +26,25 @@ export default function AdventuresPage() {
                 What to expect
               </p>
               <h2 className="font-heading text-3xl sm:text-4xl font-extrabold leading-tight">
-                Multi-day trips that push your limits
+                Long-distance hikes that push your limits
               </h2>
               <p className="mt-6 text-base leading-relaxed text-slate">
-                Once a year, we go big. The annual Dip Club adventure is a multi-day
-                international trip — up to 12 days of intensive hiking, wild swimming,
-                and shared experiences in some of Europe&apos;s most stunning landscapes.
-                Past adventures have taken us through the Dolomites and to the coast of
+                Once a year, we go big. The annual Dip Club adventure is a long-distance
+                hike across some of Europe&apos;s most stunning landscapes — up to 12 days
+                of trails, mountain passes, wild swimming, and shared experiences. Past
+                adventures have taken us through the Dolomites and along the coast of
                 South Africa.
               </p>
               <p className="mt-4 text-base leading-relaxed text-slate">
-                This is where the deepest bonds are formed. You&apos;ll return home
-                exhausted, inspired, and with a group of people who now feel like family.
+                This is where the deepest bonds are formed. Day after day on the trail
+                together, you&apos;ll return home exhausted, inspired, and with a group
+                of people who now feel like family.
               </p>
             </ScrollReveal>
 
             {/* Right: image */}
             <ScrollReveal delay={0.2} className="flex-1">
-              <div className="relative h-[300px] sm:h-[400px] overflow-hidden rounded-2xl">
+              <div className="relative h-[300px] sm:h-[400px] overflow-hidden rounded-lg">
                 <Image
                   src="/media/dc-annual-adventure-2.JPG"
                   alt="Dip Club Amsterdam annual adventure"
@@ -71,11 +72,12 @@ export default function AdventuresPage() {
               </h2>
               <ul className="mt-6 space-y-4">
                 {[
-                  "Duration: 7-12 days",
-                  "Destinations: European mountain ranges, coastal trails, wild landscapes",
+                  "Duration: 7-12 days of continuous hiking",
+                  "Routes: European long-distance trails, mountain crossings, coastal paths",
                   "Group size: 8-12 people",
-                  "What to bring: Hiking boots, backpack, camping gear (full packing list provided)",
-                  "Cost: Shared expenses — typically includes flights, accommodation, and food",
+                  "What to bring: Trail shoes, backpack, camping gear (full packing list provided)",
+                  "Travel: Trains and buses where possible — we keep it local",
+                  "Cost: Shared expenses — transport, accommodation, and food",
                 ].map((item) => (
                   <li key={item} className="flex items-center gap-3 text-base text-slate">
                     <span className="h-2 w-2 flex-shrink-0 rounded-full bg-terracotta" />
@@ -87,7 +89,7 @@ export default function AdventuresPage() {
 
             {/* Left: image */}
             <ScrollReveal delay={0.2} className="flex-1">
-              <div className="relative h-[300px] sm:h-[400px] overflow-hidden rounded-2xl">
+              <div className="relative h-[300px] sm:h-[400px] overflow-hidden rounded-lg">
                 <Image
                   src="/media/dc-polaroid-4-dolomites-hike.jpg"
                   alt="Dolomites hike adventure"
@@ -102,7 +104,7 @@ export default function AdventuresPage() {
       </section>
 
       {/* Photo gallery */}
-      <section className="bg-white py-24 lg:py-32">
+      <section className="bg-offwhite py-24 lg:py-32">
         <div className="mx-auto max-w-[1320px] px-6 lg:px-12">
           <ScrollReveal>
             <h2 className="font-heading text-3xl font-extrabold mb-12">
@@ -111,7 +113,7 @@ export default function AdventuresPage() {
           </ScrollReveal>
           <div className="grid gap-4 sm:grid-cols-3">
             <ScrollReveal delay={0.1}>
-              <div className="group relative aspect-[4/3] overflow-hidden rounded-2xl">
+              <div className="group relative aspect-[4/3] overflow-hidden rounded-lg">
                 <Image
                   src="/media/dc-polaroid-2-dolomites-hike.jpg"
                   alt="Dolomites hike"
@@ -122,7 +124,7 @@ export default function AdventuresPage() {
               </div>
             </ScrollReveal>
             <ScrollReveal delay={0.2}>
-              <div className="group relative aspect-[4/3] overflow-hidden rounded-2xl">
+              <div className="group relative aspect-[4/3] overflow-hidden rounded-lg">
                 <Image
                   src="/media/dc-polaroid-3-south-africa-hike.jpg"
                   alt="South Africa hike"
@@ -133,7 +135,7 @@ export default function AdventuresPage() {
               </div>
             </ScrollReveal>
             <ScrollReveal delay={0.3}>
-              <div className="group relative aspect-[4/3] overflow-hidden rounded-2xl">
+              <div className="group relative aspect-[4/3] overflow-hidden rounded-lg">
                 <Image
                   src="/media/IMG_6342.jpg"
                   alt="Adventure photo"
@@ -148,7 +150,7 @@ export default function AdventuresPage() {
       </section>
 
       {/* CTA section */}
-      <WaveDivider topColor="#FFFFFF" bottomColor="#E2725B" />
+      <WaveDivider topColor="#e8e5e2" bottomColor="#eb6342" />
       <section className="bg-terracotta py-24 lg:py-32 text-center">
         <div className="mx-auto max-w-[1320px] px-6 lg:px-12">
           <ScrollReveal>
@@ -162,7 +164,7 @@ export default function AdventuresPage() {
             <div className="mt-8 flex flex-col sm:flex-row sm:justify-center items-center gap-4">
               <a
                 href="#"
-                className="inline-block rounded-full bg-white px-8 py-3.5 text-sm font-semibold text-dark hover:scale-[1.02] hover:bg-white/90 transition-all"
+                className="inline-block rounded-full bg-offwhite px-8 py-3.5 text-sm font-semibold text-dark hover:scale-[1.02] hover:bg-offwhite/90 transition-all"
               >
                 Sign Up for Next Adventure →
               </a>
@@ -170,7 +172,7 @@ export default function AdventuresPage() {
                 href="https://chat.whatsapp.com/Hgi483zWWtQ3XWt0dBnfnl"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block rounded-full border-2 border-white text-white px-8 py-3.5 text-sm font-semibold hover:bg-white hover:text-dark transition-all"
+                className="inline-block rounded-full border-2 border-white text-white px-8 py-3.5 text-sm font-semibold hover:bg-offwhite hover:text-dark transition-all"
               >
                 Join WhatsApp
               </a>

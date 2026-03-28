@@ -17,7 +17,7 @@ export default function ExcursionsPage() {
       <Hero title="EXCURSIONS" subtitle="Beyond the city limits" badge="Every semester" />
 
       {/* Overview section 1 — Text left, Image right */}
-      <section className="bg-white py-24 lg:py-32">
+      <section className="bg-offwhite py-24 lg:py-32">
         <div className="mx-auto max-w-[1320px] px-6 lg:px-12">
           <div className="flex flex-col gap-12 lg:flex-row lg:items-center lg:gap-20">
             {/* Left: text */}
@@ -42,7 +42,7 @@ export default function ExcursionsPage() {
 
             {/* Right: image */}
             <ScrollReveal delay={0.2} className="flex-1">
-              <div className="relative h-[300px] sm:h-[400px] overflow-hidden rounded-2xl">
+              <div className="relative h-[300px] sm:h-[400px] overflow-hidden rounded-lg">
                 <Image
                   src="/media/dc-quarterly-excursion.JPG"
                   alt="Dip Club Amsterdam quarterly excursion"
@@ -86,7 +86,7 @@ export default function ExcursionsPage() {
 
             {/* Left: image */}
             <ScrollReveal delay={0.2} className="flex-1">
-              <div className="relative h-[300px] sm:h-[400px] overflow-hidden rounded-2xl">
+              <div className="relative h-[300px] sm:h-[400px] overflow-hidden rounded-lg">
                 <Image
                   src="/media/Pascal Climbing Ardennes.JPG"
                   alt="Pascal climbing in the Ardennes"
@@ -101,7 +101,7 @@ export default function ExcursionsPage() {
       </section>
 
       {/* Photo gallery */}
-      <section className="bg-white py-24 lg:py-32">
+      <section className="bg-offwhite py-24 lg:py-32">
         <div className="mx-auto max-w-[1320px] px-6 lg:px-12">
           <ScrollReveal>
             <h2 className="font-heading text-3xl font-extrabold mb-12">
@@ -110,7 +110,7 @@ export default function ExcursionsPage() {
           </ScrollReveal>
           <div className="grid gap-4 sm:grid-cols-2">
             <ScrollReveal delay={0}>
-              <div className="group relative aspect-[4/3] overflow-hidden rounded-2xl">
+              <div className="group relative aspect-[4/3] overflow-hidden rounded-lg">
                 <Image
                   src="/media/IMG_4961.jpg"
                   alt="Excursion photo"
@@ -121,7 +121,7 @@ export default function ExcursionsPage() {
               </div>
             </ScrollReveal>
             <ScrollReveal delay={0.15}>
-              <div className="group relative aspect-[4/3] overflow-hidden rounded-2xl">
+              <div className="group relative aspect-[4/3] overflow-hidden rounded-lg">
                 <Image
                   src="/media/IMG_5026.jpg"
                   alt="Excursion group activity"
@@ -136,7 +136,7 @@ export default function ExcursionsPage() {
       </section>
 
       {/* CTA section */}
-      <WaveDivider topColor="#FFFFFF" bottomColor="#E2725B" />
+      <WaveDivider topColor="#e8e5e2" bottomColor="#eb6342" />
       <section className="bg-terracotta py-24 lg:py-32 text-center">
         <div className="mx-auto max-w-[1320px] px-6 lg:px-12">
           <ScrollReveal>
@@ -149,7 +149,7 @@ export default function ExcursionsPage() {
             <div className="mt-8 flex flex-col sm:flex-row sm:justify-center items-center gap-4">
               <a
                 href="#"
-                className="inline-block rounded-full bg-white px-8 py-3.5 text-sm font-semibold text-dark hover:scale-[1.02] hover:bg-white/90 transition-all"
+                className="inline-block rounded-full bg-offwhite px-8 py-3.5 text-sm font-semibold text-dark hover:scale-[1.02] hover:bg-offwhite/90 transition-all"
               >
                 Sign Up for Next Trip →
               </a>
@@ -157,7 +157,7 @@ export default function ExcursionsPage() {
                 href="https://chat.whatsapp.com/Hgi483zWWtQ3XWt0dBnfnl"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block rounded-full border-2 border-white text-white px-8 py-3.5 text-sm font-semibold hover:bg-white hover:text-dark transition-all"
+                className="inline-block rounded-full border-2 border-white text-white px-8 py-3.5 text-sm font-semibold hover:bg-offwhite hover:text-dark transition-all"
               >
                 Join WhatsApp
               </a>

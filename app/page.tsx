@@ -3,6 +3,7 @@ import ActivityCard from "./components/ActivityCard";
 import ScrollReveal from "./components/ScrollReveal";
 import StatsBar from "./components/StatsBar";
 import WaveDivider from "./components/WaveDivider";
+import PhotoMosaic from "./components/PhotoMosaic";
 import Image from "next/image";
 
 export default function Home() {
@@ -20,7 +21,7 @@ export default function Home() {
       />
 
       {/* Intro Section */}
-      <section className="bg-white py-24 lg:py-32">
+      <section className="bg-offwhite py-24 lg:py-32">
         <div className="mx-auto max-w-[1320px] px-6 lg:px-12">
           <div className="flex flex-col gap-12 lg:flex-row lg:items-center lg:gap-20">
             <ScrollReveal className="flex-1">
@@ -32,11 +33,11 @@ export default function Home() {
                 <span className="font-accent italic">discomfort</span>
               </h2>
               <p className="mt-6 max-w-lg text-base leading-relaxed text-slate">
-                Dip Club Amsterdam is an urban wellness community that brings together people who believe growth starts where comfort ends. From monthly ice baths in local waterways to multi-day adventures across Europe — we create experiences that challenge, connect, and transform.
+                Dip Club Amsterdam is an urban wellness community that brings together people who believe growth starts where comfort ends. From monthly ice baths in local waterways to multi-day hikes across Europe — we create experiences that challenge, connect, and transform.
               </p>
             </ScrollReveal>
             <ScrollReveal className="flex-1" delay={0.2}>
-              <div className="relative h-[300px] overflow-hidden rounded-2xl sm:h-[400px]">
+              <div className="relative h-[300px] overflow-hidden rounded-lg sm:h-[400px]">
                 <Image
                   src="/media/dc-polaroid-5-amsterdam-dip-spot.jpg"
                   alt="Dip Club members at an Amsterdam swimming spot"
@@ -50,8 +51,63 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Our Pillars Section */}
+      <section className="bg-offwhite py-24 lg:py-32 border-t border-dark/5">
+        <div className="mx-auto max-w-[1320px] px-6 lg:px-12">
+          <ScrollReveal>
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.15em] text-terracotta">
+              What We Practice
+            </p>
+            <h2 className="mb-16 font-heading text-3xl font-extrabold sm:text-4xl lg:text-5xl">
+              Five pillars of{" "}
+              <span className="font-accent italic">wellness</span>
+            </h2>
+          </ScrollReveal>
+          <div className="grid gap-px bg-dark/10 sm:grid-cols-2 lg:grid-cols-5 rounded-lg overflow-hidden border border-dark/10">
+            {[
+              {
+                title: "Cold Exposure",
+                description:
+                  "Ice baths and cold water swimming reset your nervous system, boost circulation, and build mental resilience. The cold teaches you to stay calm when everything tells you to run.",
+              },
+              {
+                title: "Heat Exposure",
+                description:
+                  "Sauna sessions and heat training complement the cold. The contrast between extremes strengthens your cardiovascular system and deepens recovery.",
+              },
+              {
+                title: "Breathwork",
+                description:
+                  "Guided breathing techniques prepare your body for the cold, reduce stress, and unlock energy you didn't know you had. We practice before every dip.",
+              },
+              {
+                title: "Time in Nature",
+                description:
+                  "From Amsterdam's waterways to European mountain trails — we get outside. Nature is the gym, the therapy room, and the classroom all at once.",
+              },
+              {
+                title: "Real Food",
+                description:
+                  "Post-dip coffee, shared meals on excursions, cooking together on adventures. Breaking bread together is how strangers become friends.",
+              },
+            ].map((pillar, i) => (
+              <ScrollReveal key={pillar.title} delay={i * 0.08}>
+                <div className="bg-offwhite p-6 lg:p-8 h-full">
+                  <h3 className="font-heading text-base font-extrabold uppercase tracking-wide">
+                    {pillar.title}
+                  </h3>
+                  <p className="mt-3 text-sm leading-relaxed text-slate">
+                    {pillar.description}
+                  </p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Activities Section */}
-      <section className="bg-offwhite py-24 lg:py-32">
+      <section className="bg-offwhite py-24 lg:py-32 border-t border-dark/5">
         <div className="mx-auto max-w-[1320px] px-6 lg:px-12">
           <ScrollReveal>
             <h2 className="mb-12 font-heading text-3xl font-extrabold sm:text-4xl lg:text-5xl">
@@ -85,9 +141,9 @@ export default function Home() {
               <ActivityCard
                 title="Adventures"
                 frequency="Once a Year"
-                description="Multi-day international trips across Europe. Up to 12 days of intensive hiking, bonding, and unforgettable experiences."
+                description="Multi-day long-distance hikes across Europe. Up to 12 days of trails, mountain passes, and unforgettable landscapes."
                 imageSrc="/media/dc-annual-adventure-2.JPG"
-                imageAlt="Dip Club adventure trip in the mountains"
+                imageAlt="Dip Club adventure hike in the mountains"
                 href="/adventures"
                 accentColor="bg-terracotta"
               />
@@ -97,7 +153,7 @@ export default function Home() {
       </section>
 
       {/* Wave: offwhite → terracotta */}
-      <WaveDivider topColor="#F5F3EF" bottomColor="#E2725B" />
+      <WaveDivider topColor="#e8e5e2" bottomColor="#eb6342" />
 
       {/* Stats Bar */}
       <StatsBar stats={[
@@ -106,55 +162,66 @@ export default function Home() {
         { value: "3", label: "Countries" },
       ]} />
 
-      {/* Wave: terracotta → white */}
-      <WaveDivider topColor="#E2725B" bottomColor="#FFFFFF" />
+      {/* Wave: terracotta → offwhite */}
+      <WaveDivider topColor="#eb6342" bottomColor="#e8e5e2" />
 
-      {/* Community Section */}
-      <section className="bg-white py-24 lg:py-32">
+      {/* Europe Appreciation Section */}
+      <section className="bg-offwhite py-24 lg:py-32">
         <div className="mx-auto max-w-[1320px] px-6 lg:px-12">
-          <ScrollReveal>
-            <p className="text-xs font-semibold uppercase tracking-[0.15em] text-terracotta mb-2">
-              Exploring together
-            </p>
-            <h2 className="font-heading text-3xl sm:text-4xl font-extrabold mb-12">
-              Stories from our recent trips
-            </h2>
-          </ScrollReveal>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            <ScrollReveal delay={0.1}>
-              <div className="group relative aspect-[4/3] overflow-hidden rounded-2xl">
+          <div className="flex flex-col gap-12 lg:flex-row lg:items-center lg:gap-20">
+            <ScrollReveal className="flex-1 order-2 lg:order-1" delay={0.2}>
+              <div className="relative h-[300px] overflow-hidden rounded-lg sm:h-[400px]">
                 <Image
                   src="/media/dc-polaroid-2-dolomites-hike.jpg"
-                  alt="Dip Club members hiking in the Dolomites"
+                  alt="Hiking through the European Dolomites"
                   fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>
             </ScrollReveal>
-            <ScrollReveal delay={0.2}>
-              <div className="group relative aspect-[4/3] overflow-hidden rounded-2xl">
-                <Image
-                  src="/media/dc-polaroid-1-amstel-dip.JPG"
-                  alt="Dip Club members at an Amstel dip"
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                />
-              </div>
-            </ScrollReveal>
-            <ScrollReveal delay={0.3}>
-              <div className="group relative aspect-[4/3] overflow-hidden rounded-2xl">
-                <Image
-                  src="/media/dc-polaroid-3-south-africa-hike.jpg"
-                  alt="Dip Club members hiking in South Africa"
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                />
-              </div>
+            <ScrollReveal className="flex-1 order-1 lg:order-2">
+              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.15em] text-terracotta">
+                Local Appreciation
+              </p>
+              <h2 className="font-heading text-3xl font-extrabold leading-tight sm:text-4xl lg:text-5xl">
+                The beauty of{" "}
+                <span className="font-accent italic">Europe</span>
+              </h2>
+              <p className="mt-6 max-w-lg text-base leading-relaxed text-slate">
+                We don&apos;t fly halfway across the world to find adventure. From the canals of Amsterdam to the peaks of the Dolomites, the Ardennes forests to the Atlantic coast — Europe has everything. Ancient trails, wild rivers, and landscapes that have inspired people for centuries.
+              </p>
+              <p className="mt-4 max-w-lg text-base leading-relaxed text-slate">
+                Our adventures stay close to home by design. We take trains where we can, cook with local ingredients, and stay in places that support the communities we visit. Exploring responsibly isn&apos;t a compromise — it&apos;s how the best trips happen.
+              </p>
             </ScrollReveal>
           </div>
+        </div>
+      </section>
+
+      {/* Photo Mosaic Section */}
+      <section className="bg-offwhite py-24 lg:py-32 border-t border-dark/5">
+        <div className="mx-auto max-w-[1320px] px-6 lg:px-12">
+          <ScrollReveal>
+            <p className="mb-2 text-xs font-semibold uppercase tracking-[0.15em] text-terracotta">
+              Exploring together
+            </p>
+            <h2 className="mb-12 font-heading text-3xl sm:text-4xl font-extrabold">
+              Stories from our trips
+            </h2>
+          </ScrollReveal>
+          <PhotoMosaic
+            photos={[
+              { src: "/media/dc-polaroid-2-dolomites-hike.jpg", alt: "Hiking in the Dolomites", aspect: "tall" },
+              { src: "/media/dc-polaroid-1-amstel-dip.JPG", alt: "Ice dip at the Amstel", aspect: "square" },
+              { src: "/media/dc-biweekly-dip.jpg", alt: "Monthly cold water dip", aspect: "square" },
+              { src: "/media/dc-polaroid-3-south-africa-hike.jpg", alt: "Coastal hike", aspect: "wide" },
+              { src: "/media/dc-quarterly-excursion.JPG", alt: "Weekend excursion", aspect: "square" },
+              { src: "/media/dc-polaroid-4-dolomites-hike.jpg", alt: "Mountain trail", aspect: "tall" },
+              { src: "/media/dc-polaroid-5-amsterdam-dip-spot.jpg", alt: "Amsterdam swimming spot", aspect: "square" },
+              { src: "/media/IMG_2377.jpg", alt: "Community gathering", aspect: "square" },
+            ]}
+          />
           <div className="mt-12">
             <a
               href="https://www.instagram.com/dipclub.ams/"
@@ -184,12 +251,11 @@ export default function Home() {
       </section>
 
       {/* Contact Card Section */}
-      <section className="bg-offwhite py-24 lg:py-32">
+      <section className="bg-offwhite py-24 lg:py-32 border-t border-dark/5">
         <div className="mx-auto max-w-[1320px] px-6 lg:px-12">
           <div className="flex flex-col gap-8 lg:flex-row lg:items-stretch lg:gap-12">
-            {/* Card 1: Contact */}
             <ScrollReveal className="flex-1">
-              <div className="h-full flex flex-col justify-center rounded-2xl border border-dark/10 bg-white p-8 lg:p-12">
+              <div className="h-full flex flex-col justify-center rounded-lg border border-dark/15 bg-offwhite p-8 lg:p-12">
                 <h2 className="font-heading text-2xl sm:text-3xl font-extrabold">Contact</h2>
                 <p className="mt-4 text-base text-slate">
                   Got a question?{"\n"}Don&apos;t hesitate to ask us.
@@ -215,9 +281,8 @@ export default function Home() {
                 </a>
               </div>
             </ScrollReveal>
-            {/* Card 2: Join the community */}
             <ScrollReveal className="flex-1" delay={0.15}>
-              <div className="h-full flex flex-col justify-center rounded-2xl bg-terracotta p-8 lg:p-12 text-white">
+              <div className="h-full flex flex-col justify-center rounded-lg border border-terracotta bg-terracotta p-8 lg:p-12 text-white">
                 <h2 className="font-heading text-2xl sm:text-3xl font-extrabold">Join the community</h2>
                 <p className="mt-4 text-base text-white/80">
                   Be the first to know about upcoming dips, excursions, and adventures.
@@ -226,7 +291,7 @@ export default function Home() {
                   href="https://chat.whatsapp.com/Hgi483zWWtQ3XWt0dBnfnl"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-6 w-fit rounded-full bg-white px-8 py-3 text-sm font-semibold text-dark hover:scale-[1.02] hover:bg-white/90 transition-all"
+                  className="mt-6 w-fit rounded-full bg-offwhite px-8 py-3 text-sm font-semibold text-dark hover:scale-[1.02] hover:bg-offwhite/90 transition-all"
                 >
                   Join WhatsApp →
                 </a>

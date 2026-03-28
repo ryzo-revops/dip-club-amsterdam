@@ -55,7 +55,7 @@ export default function Navbar() {
           "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
           isTransparent
             ? "bg-transparent"
-            : "bg-white/95 backdrop-blur-md shadow-sm",
+            : "bg-[#e8e5e2]/95 backdrop-blur-md shadow-sm",
         ].join(" ")}
       >
         <div className="max-w-[1320px] mx-auto px-6 lg:px-12">

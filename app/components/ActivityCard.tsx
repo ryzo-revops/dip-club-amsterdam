@@ -22,7 +22,7 @@ export default function ActivityCard({
 }: ActivityCardProps) {
   return (
     <Link href={href} className="group block">
-      <article className="overflow-hidden rounded-2xl bg-white shadow-sm transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-lg">
+      <article className="overflow-hidden rounded-lg border border-dark/15 bg-white transition-all duration-300 group-hover:-translate-y-1 group-hover:border-dark/30">
         <div className="relative aspect-[4/3] overflow-hidden">
           <Image
             src={imageSrc}

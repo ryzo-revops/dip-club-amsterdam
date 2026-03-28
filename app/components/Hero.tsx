@@ -41,7 +41,7 @@ export default function Hero({
               </span>
             )}
 
-            <h1 className="font-display text-7xl sm:text-8xl lg:text-[120px] leading-[0.9] text-white">
+            <h1 className="font-heading text-7xl sm:text-8xl lg:text-[120px] leading-[0.85] tracking-tight text-white uppercase">
               {title}
             </h1>
 
@@ -70,7 +70,7 @@ export default function Hero({
 
           {/* Right column */}
           {imageSrc && (
-            <div className="relative h-[280px] sm:h-[340px] lg:h-[400px] lg:w-[440px] lg:flex-shrink-0 overflow-hidden rounded-2xl">
+            <div className="relative h-[280px] sm:h-[340px] lg:h-[400px] lg:w-[440px] lg:flex-shrink-0 overflow-hidden rounded-lg">
               <Image
                 src={imageSrc}
                 alt={imageAlt ?? ""}
