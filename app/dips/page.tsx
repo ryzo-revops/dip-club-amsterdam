@@ -79,7 +79,7 @@ export default function DipsPage() {
                   "Cost: Free — just show up",
                 ].map((item) => (
                   <li key={item} className="flex items-center gap-3 text-base text-slate">
-                    <span className="h-2 w-2 flex-shrink-0 rounded-full bg-blue" />
+                    <span className="h-2 w-2 flex-shrink-0 rounded-sm bg-blue" />
                     {item}
                   </li>
                 ))}
@@ -138,7 +138,7 @@ export default function DipsPage() {
       </section>
 
       {/* CTA section */}
-      <WaveDivider topColor="#e8e5e2" bottomColor="#eb6342" />
+      <WaveDivider topColor="#e8e5e2" bottomColor="#f06530" />
       <section className="bg-terracotta py-24 lg:py-32 text-center">
         <div className="mx-auto max-w-[1320px] px-6 lg:px-12">
           <ScrollReveal>
@@ -153,7 +153,7 @@ export default function DipsPage() {
               href="https://chat.whatsapp.com/Hgi483zWWtQ3XWt0dBnfnl"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-8 inline-block rounded-full bg-offwhite px-8 py-3.5 text-sm font-semibold text-dark hover:scale-[1.02] hover:bg-offwhite/90 transition-all"
+              className="mt-8 inline-block rounded-sm bg-offwhite px-8 py-3.5 text-sm font-semibold text-dark hover:scale-[1.02] hover:bg-offwhite/90 transition-all"
             >
               Join WhatsApp Community →
             </a>

@@ -91,7 +91,7 @@ export default function Navbar() {
                         : "text-dark hover:text-terracotta",
                       isActive
                         ? [
-                            "after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:rounded-full",
+                            "after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:rounded-sm",
                             isTransparent ? "after:bg-white" : "after:bg-terracotta",
                           ].join(" ")
                         : "",
@@ -108,7 +108,7 @@ export default function Navbar() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className={[
-                  "ml-2 px-5 py-2 rounded-full text-sm font-semibold transition-all duration-200",
+                  "ml-2 px-5 py-2 rounded-sm text-sm font-semibold transition-all duration-200",
                   isTransparent
                     ? "bg-white text-dark hover:bg-white/90"
                     : "bg-terracotta text-white hover:bg-terracotta-dark",
@@ -178,7 +178,7 @@ export default function Navbar() {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-4 px-8 py-3 rounded-full bg-terracotta text-white text-base font-semibold hover:bg-terracotta-dark transition-colors duration-200"
+            className="mt-4 px-8 py-3 rounded-sm bg-terracotta text-white text-base font-semibold hover:bg-terracotta-dark transition-colors duration-200"
           >
             Join WhatsApp Community
           </a>

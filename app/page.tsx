@@ -14,10 +14,28 @@ export default function Home() {
         description="Amsterdam's urban wellness community. Ice baths, breathwork, and outdoor adventures for those who choose growth over comfort."
         ctaText="Join Our WhatsApp Community →"
         ctaHref="https://chat.whatsapp.com/Hgi483zWWtQ3XWt0dBnfnl"
-        imageSrc="/media/dc-hero-image-website.png"
-        imageAlt="Dip Club community members at an outdoor ice bath"
         fullHeight
       />
+
+      {/* Photo Mosaic — right after hero */}
+      <section className="bg-offwhite pt-0 pb-12">
+        <div className="mx-auto max-w-[1320px] px-6 lg:px-12">
+          <PhotoMosaic
+            photos={[
+              { src: "/media/dc-polaroid-2-dolomites-hike.jpg", alt: "Hiking in the Dolomites", aspect: "tall" },
+              { src: "/media/dc-polaroid-1-amstel-dip.JPG", alt: "Ice dip at the Amstel", aspect: "square" },
+              { src: "/media/dc-biweekly-dip.jpg", alt: "Monthly cold water dip", aspect: "square" },
+              { src: "/media/dc-polaroid-3-south-africa-hike.jpg", alt: "Coastal hike", aspect: "wide" },
+              { src: "/media/dc-quarterly-excursion.JPG", alt: "Weekend excursion", aspect: "square" },
+              { src: "/media/dc-polaroid-4-dolomites-hike.jpg", alt: "Mountain trail", aspect: "tall" },
+              { src: "/media/dc-polaroid-5-amsterdam-dip-spot.jpg", alt: "Amsterdam swimming spot", aspect: "square" },
+              { src: "/media/IMG_2377.jpg", alt: "Community gathering", aspect: "square" },
+              { src: "/media/dc-hero-image-website.png", alt: "Dip Club community", aspect: "wide" },
+              { src: "/media/dc-annual-adventure-2.JPG", alt: "Annual adventure hike", aspect: "square" },
+            ]}
+          />
+        </div>
+      </section>
 
       {/* Intro Section */}
       <section className="bg-offwhite py-24 lg:py-32">
@@ -192,56 +210,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Photo Mosaic Section */}
-      <section className="bg-offwhite py-24 lg:py-32 border-t border-dark/5">
-        <div className="mx-auto max-w-[1320px] px-6 lg:px-12">
-          <ScrollReveal>
-            <p className="mb-2 text-xs font-semibold uppercase tracking-[0.15em] text-terracotta">
-              Exploring together
-            </p>
-            <h2 className="mb-12 font-heading text-3xl sm:text-4xl font-extrabold">
-              Stories from our trips
-            </h2>
-          </ScrollReveal>
-          <PhotoMosaic
-            photos={[
-              { src: "/media/dc-polaroid-2-dolomites-hike.jpg", alt: "Hiking in the Dolomites", aspect: "tall" },
-              { src: "/media/dc-polaroid-1-amstel-dip.JPG", alt: "Ice dip at the Amstel", aspect: "square" },
-              { src: "/media/dc-biweekly-dip.jpg", alt: "Monthly cold water dip", aspect: "square" },
-              { src: "/media/dc-polaroid-3-south-africa-hike.jpg", alt: "Coastal hike", aspect: "wide" },
-              { src: "/media/dc-quarterly-excursion.JPG", alt: "Weekend excursion", aspect: "square" },
-              { src: "/media/dc-polaroid-4-dolomites-hike.jpg", alt: "Mountain trail", aspect: "tall" },
-              { src: "/media/dc-polaroid-5-amsterdam-dip-spot.jpg", alt: "Amsterdam swimming spot", aspect: "square" },
-              { src: "/media/IMG_2377.jpg", alt: "Community gathering", aspect: "square" },
-            ]}
-          />
-          <div className="mt-12">
-            <a
-              href="https://www.instagram.com/dipclub.ams/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-dark/20 px-4 py-2 text-sm font-medium hover:bg-dark hover:text-white transition-colors"
-            >
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                aria-hidden="true"
-              >
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
-              </svg>
-              @dipclub.ams
-            </a>
-          </div>
-        </div>
-      </section>
 
       {/* Contact Card Section */}
       <section className="bg-offwhite py-24 lg:py-32 border-t border-dark/5">
@@ -284,7 +252,7 @@ export default function Home() {
                   href="https://chat.whatsapp.com/Hgi483zWWtQ3XWt0dBnfnl"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-6 w-fit rounded-full bg-offwhite px-8 py-3 text-sm font-semibold text-dark hover:scale-[1.02] hover:bg-offwhite/90 transition-all"
+                  className="mt-6 w-fit rounded-sm bg-offwhite px-8 py-3 text-sm font-semibold text-dark hover:scale-[1.02] hover:bg-offwhite/90 transition-all"
                 >
                   Join WhatsApp →
                 </a>

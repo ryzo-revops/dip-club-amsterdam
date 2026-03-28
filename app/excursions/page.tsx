@@ -77,7 +77,7 @@ export default function ExcursionsPage() {
                   "Cost: Shared expenses (transport, accommodation, food)",
                 ].map((item) => (
                   <li key={item} className="flex items-center gap-3 text-base text-slate">
-                    <span className="h-2 w-2 flex-shrink-0 rounded-full bg-green" />
+                    <span className="h-2 w-2 flex-shrink-0 rounded-sm bg-green" />
                     {item}
                   </li>
                 ))}
@@ -136,7 +136,7 @@ export default function ExcursionsPage() {
       </section>
 
       {/* CTA section */}
-      <WaveDivider topColor="#e8e5e2" bottomColor="#eb6342" />
+      <WaveDivider topColor="#e8e5e2" bottomColor="#f06530" />
       <section className="bg-terracotta py-24 lg:py-32 text-center">
         <div className="mx-auto max-w-[1320px] px-6 lg:px-12">
           <ScrollReveal>
@@ -149,7 +149,7 @@ export default function ExcursionsPage() {
             <div className="mt-8 flex flex-col sm:flex-row sm:justify-center items-center gap-4">
               <a
                 href="#"
-                className="inline-block rounded-full bg-offwhite px-8 py-3.5 text-sm font-semibold text-dark hover:scale-[1.02] hover:bg-offwhite/90 transition-all"
+                className="inline-block rounded-sm bg-offwhite px-8 py-3.5 text-sm font-semibold text-dark hover:scale-[1.02] hover:bg-offwhite/90 transition-all"
               >
                 Sign Up for Next Trip →
               </a>
@@ -157,7 +157,7 @@ export default function ExcursionsPage() {
                 href="https://chat.whatsapp.com/Hgi483zWWtQ3XWt0dBnfnl"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block rounded-full border-2 border-white text-white px-8 py-3.5 text-sm font-semibold hover:bg-offwhite hover:text-dark transition-all"
+                className="inline-block rounded-sm border-2 border-white text-white px-8 py-3.5 text-sm font-semibold hover:bg-offwhite hover:text-dark transition-all"
               >
                 Join WhatsApp
               </a>

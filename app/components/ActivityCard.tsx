@@ -37,7 +37,7 @@ export default function ActivityCard({
             <h3 className="font-heading text-xl font-extrabold uppercase tracking-wide">
               {title}
             </h3>
-            <span className={`rounded-full px-3 py-0.5 text-xs font-semibold text-white ${accentColor}`}>
+            <span className={`rounded-sm px-3 py-0.5 text-xs font-semibold text-white ${accentColor}`}>
               {frequency}
             </span>
           </div>

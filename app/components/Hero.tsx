@@ -36,7 +36,7 @@ export default function Hero({
           {/* Left column */}
           <div className="max-w-2xl flex flex-col gap-4">
             {badge && (
-              <span className="rounded-full bg-white/20 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-white w-fit">
+              <span className="rounded-sm bg-white/20 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-white w-fit">
                 {badge}
               </span>
             )}
@@ -61,7 +61,7 @@ export default function Hero({
                 {...(isExternal
                   ? { target: "_blank", rel: "noopener noreferrer" }
                   : {})}
-                className="rounded-full bg-white px-8 py-3.5 text-sm font-semibold text-dark hover:scale-[1.02] hover:bg-white/90 transition-all mt-2 w-fit"
+                className="rounded-sm bg-white px-8 py-3.5 text-sm font-semibold text-dark hover:scale-[1.02] hover:bg-white/90 transition-all mt-2 w-fit"
               >
                 {ctaText}
               </a>
