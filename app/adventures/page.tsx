@@ -103,6 +103,89 @@ export default function AdventuresPage() {
         </div>
       </section>
 
+      {/* Why it works — exercise, nature, connection */}
+      <section className="bg-offwhite py-24 lg:py-32 border-t border-dark/5">
+        <div className="mx-auto max-w-[1320px] px-6 lg:px-12">
+          <ScrollReveal>
+            <p className="text-xs font-semibold uppercase tracking-[0.15em] text-terracotta mb-4">
+              Why long-distance hiking transforms you
+            </p>
+            <h2 className="font-heading text-3xl sm:text-4xl font-extrabold leading-tight mb-12">
+              Days on the trail change{" "}
+              <span className="font-accent italic">everything</span>
+            </h2>
+          </ScrollReveal>
+          <div className="grid gap-px bg-dark/10 sm:grid-cols-3 rounded-lg overflow-hidden border border-dark/10">
+            <ScrollReveal delay={0}>
+              <div className="bg-offwhite p-6 lg:p-8 h-full">
+                <h3 className="font-heading text-base font-extrabold uppercase tracking-wide">
+                  Sustained Exercise
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-slate">
+                  Walking 15-25 km per day for a week straight does something no gym session can. Your body adapts, your endurance builds, and your relationship with physical effort fundamentally shifts. Long-distance hiking improves cardiovascular health, strengthens joints, and triggers deep recovery cycles that leave you fitter than when you started.
+                </p>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal delay={0.08}>
+              <div className="bg-offwhite p-6 lg:p-8 h-full">
+                <h3 className="font-heading text-base font-extrabold uppercase tracking-wide">
+                  Deep Time in Nature
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-slate">
+                  A weekend in nature is refreshing. A week is transformative. After a few days, your cortisol drops, your sleep deepens, and your senses sharpen. You start hearing birdsong, smelling rain before it arrives, and noticing how light changes through the day. Extended time outdoors recalibrates your nervous system in ways that persist long after you return home.
+                </p>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal delay={0.16}>
+              <div className="bg-offwhite p-6 lg:p-8 h-full">
+                <h3 className="font-heading text-base font-extrabold uppercase tracking-wide">
+                  Connection Through Effort
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-slate">
+                  There&apos;s a reason soldiers, athletes, and explorers form the strongest bonds — shared adversity creates trust faster than anything else. Hiking through rain, sharing a meal after a hard day, helping each other up a mountain pass. These aren&apos;t activities. They&apos;re the foundation of real friendship. People come home from our adventures with relationships that last years.
+                </p>
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
+      {/* How to prepare */}
+      <section className="bg-offwhite py-24 lg:py-32 border-t border-dark/5">
+        <div className="mx-auto max-w-[1320px] px-6 lg:px-12">
+          <div className="flex flex-col gap-12 lg:flex-row lg:items-start lg:gap-20">
+            <ScrollReveal className="flex-1">
+              <p className="text-xs font-semibold uppercase tracking-[0.15em] text-terracotta mb-4">
+                Preparation
+              </p>
+              <h2 className="font-heading text-3xl sm:text-4xl font-extrabold leading-tight">
+                How to prepare for a long-distance hike
+              </h2>
+              <p className="mt-6 text-base leading-relaxed text-slate">
+                You don&apos;t need to be an athlete. You need to be willing to prepare. We share a full training guide 3 months before each adventure, but here&apos;s the foundation.
+              </p>
+            </ScrollReveal>
+            <ScrollReveal className="flex-1" delay={0.1}>
+              <ul className="space-y-4">
+                {[
+                  "Build a base: Walk 10-15 km at least twice a week for 8-12 weeks before the trip. Increase distance gradually.",
+                  "Train with weight: Hike with a loaded backpack (8-12 kg) to condition your legs, back, and shoulders.",
+                  "Break in your gear: Wear your trail shoes on every training walk. Blisters are caused by new gear, not long days.",
+                  "Strengthen your core: Planks, deadlifts, and single-leg squats help prevent injury on uneven terrain.",
+                  "Practice elevation: If possible, find hills. Stairs work too. Your legs need to know what climbing feels like.",
+                  "Rest and recover: Don't overtrain the final 2 weeks. Arrive rested, not exhausted.",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-base text-slate">
+                    <span className="mt-2 h-2 w-2 flex-shrink-0 rounded-sm bg-terracotta" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
       {/* Photo gallery */}
       <section className="bg-offwhite py-24 lg:py-32">
         <div className="mx-auto max-w-[1320px] px-6 lg:px-12">

@@ -102,6 +102,89 @@ export default function DipsPage() {
         </div>
       </section>
 
+      {/* Why it works — benefits of cold, heat, breathwork */}
+      <section className="bg-offwhite py-24 lg:py-32 border-t border-dark/5">
+        <div className="mx-auto max-w-[1320px] px-6 lg:px-12">
+          <ScrollReveal>
+            <p className="text-xs font-semibold uppercase tracking-[0.15em] text-blue mb-4">
+              Why it works
+            </p>
+            <h2 className="font-heading text-3xl sm:text-4xl font-extrabold leading-tight mb-12">
+              The science behind the{" "}
+              <span className="font-accent italic">shiver</span>
+            </h2>
+          </ScrollReveal>
+          <div className="grid gap-px bg-dark/10 sm:grid-cols-3 rounded-lg overflow-hidden border border-dark/10">
+            <ScrollReveal delay={0}>
+              <div className="bg-offwhite p-6 lg:p-8 h-full">
+                <h3 className="font-heading text-base font-extrabold uppercase tracking-wide">
+                  Cold Exposure
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-slate">
+                  Cold water immersion activates your sympathetic nervous system, releasing norepinephrine and boosting dopamine levels by up to 250%. Regular cold exposure improves circulation, reduces inflammation, and trains your body to manage stress more effectively. Over time, you build resilience — not just to cold, but to discomfort in general.
+                </p>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal delay={0.08}>
+              <div className="bg-offwhite p-6 lg:p-8 h-full">
+                <h3 className="font-heading text-base font-extrabold uppercase tracking-wide">
+                  Heat Exposure
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-slate">
+                  The contrast between cold and heat is where the magic happens. Heat exposure through sauna or warm-up sessions increases heart rate, promotes blood flow, and triggers heat shock proteins that repair damaged cells. Alternating between hot and cold creates a cardiovascular workout that strengthens your heart and immune system.
+                </p>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal delay={0.16}>
+              <div className="bg-offwhite p-6 lg:p-8 h-full">
+                <h3 className="font-heading text-base font-extrabold uppercase tracking-wide">
+                  Breathwork
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-slate">
+                  Controlled breathing is the bridge between mind and body. Before every dip, we practice techniques that oxygenate your blood, calm your nervous system, and prepare you to stay present in the cold. Breathwork reduces cortisol, improves focus, and gives you a tool you can use long after the session ends — in stressful meetings, difficult conversations, or sleepless nights.
+                </p>
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
+      {/* How to prepare */}
+      <section className="bg-offwhite py-24 lg:py-32 border-t border-dark/5">
+        <div className="mx-auto max-w-[1320px] px-6 lg:px-12">
+          <div className="flex flex-col gap-12 lg:flex-row lg:items-start lg:gap-20">
+            <ScrollReveal className="flex-1">
+              <p className="text-xs font-semibold uppercase tracking-[0.15em] text-blue mb-4">
+                Preparation
+              </p>
+              <h2 className="font-heading text-3xl sm:text-4xl font-extrabold leading-tight">
+                How to prepare for your first dip
+              </h2>
+              <p className="mt-6 text-base leading-relaxed text-slate">
+                No cold water experience needed. But a little preparation goes a long way — both physically and mentally.
+              </p>
+            </ScrollReveal>
+            <ScrollReveal className="flex-1" delay={0.1}>
+              <ul className="space-y-4">
+                {[
+                  "Start at home: End your daily showers with 30 seconds of cold water. Build to 1-2 minutes over a few weeks.",
+                  "Practice breathing: Try box breathing (4 seconds in, 4 hold, 4 out, 4 hold) to calm your nervous system. This is your main tool in the water.",
+                  "Eat well beforehand: Have a solid breakfast. Your body burns calories to stay warm — give it fuel.",
+                  "Bring warm layers: The after-dip is as important as the dip. Bring a hat, warm socks, a thick hoodie, and a hot drink in a thermos.",
+                  "Don't force it: Your first time, even 30 seconds in the water is a win. You set the pace, not the group.",
+                  "Come with an open mind: The cold is a tool. The community is the reward.",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-base text-slate">
+                    <span className="mt-2 h-2 w-2 flex-shrink-0 rounded-sm bg-blue" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
       {/* Photo gallery */}
       <section className="bg-offwhite py-24 lg:py-32">
         <div className="mx-auto max-w-[1320px] px-6 lg:px-12">

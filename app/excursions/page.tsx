@@ -100,6 +100,58 @@ export default function ExcursionsPage() {
         </div>
       </section>
 
+      {/* Why it works — local appreciation */}
+      <section className="bg-offwhite py-24 lg:py-32 border-t border-dark/5">
+        <div className="mx-auto max-w-[1320px] px-6 lg:px-12">
+          <div className="flex flex-col gap-12 lg:flex-row lg:items-start lg:gap-20">
+            <ScrollReveal className="flex-1">
+              <p className="text-xs font-semibold uppercase tracking-[0.15em] text-green mb-4">
+                Why we explore close to home
+              </p>
+              <h2 className="font-heading text-3xl sm:text-4xl font-extrabold leading-tight">
+                Learning to see what&apos;s{" "}
+                <span className="font-accent italic">already here</span>
+              </h2>
+              <p className="mt-6 text-base leading-relaxed text-slate">
+                Most of us live surrounded by landscapes we&apos;ve never explored. The Netherlands and its neighbours hold centuries of natural beauty, cultural richness, and culinary traditions that reward anyone willing to slow down and pay attention.
+              </p>
+              <p className="mt-4 text-base leading-relaxed text-slate">
+                On excursions, we forage wild garlic in the Ardennes, swim in rivers most locals have forgotten about, eat at farms rather than restaurants, and learn the names of the trees we walk under. It&apos;s a practice of local appreciation — discovering that adventure doesn&apos;t require a long-haul flight, just a willingness to look closer at where you already are.
+              </p>
+            </ScrollReveal>
+            <ScrollReveal className="flex-1" delay={0.1}>
+              <div className="grid gap-px bg-dark/10 rounded-lg overflow-hidden border border-dark/10">
+                {[
+                  {
+                    title: "Flora & Fauna",
+                    text: "Learn to identify local plants, spot wildlife, and understand the ecosystems you walk through. Every trail tells a story if you know how to read it.",
+                  },
+                  {
+                    title: "Local Cuisine",
+                    text: "We cook with regional ingredients, eat at local farms, and discover food traditions rooted in the landscape. A meal tastes different when you understand where it came from.",
+                  },
+                  {
+                    title: "Culture & Heritage",
+                    text: "From medieval Wallonian villages to Dutch polders, each destination has layers of history. We explore places with curiosity, not just checkboxes.",
+                  },
+                ].map((item, i) => (
+                  <ScrollReveal key={item.title} delay={0.1 + i * 0.08}>
+                    <div className="bg-offwhite p-6">
+                      <h3 className="font-heading text-sm font-extrabold uppercase tracking-wide">
+                        {item.title}
+                      </h3>
+                      <p className="mt-2 text-sm leading-relaxed text-slate">
+                        {item.text}
+                      </p>
+                    </div>
+                  </ScrollReveal>
+                ))}
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
       {/* Photo gallery */}
       <section className="bg-offwhite py-24 lg:py-32">
         <div className="mx-auto max-w-[1320px] px-6 lg:px-12">
