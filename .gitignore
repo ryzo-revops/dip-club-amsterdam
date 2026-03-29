@@ -12,3 +12,4 @@ out/
 *.mp4
 *.HEIC
 *.heic
+.env*.local

@@ -1,4 +1,4 @@
-import Hero from "./components/Hero";
+import HomeHero from "./components/HomeHero";
 import ActivityCard from "./components/ActivityCard";
 import ScrollReveal from "./components/ScrollReveal";
 import StatsBar from "./components/StatsBar";
@@ -7,29 +7,13 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main>
-      <Hero
-        title="DIP CLUB"
-        subtitle="Seek Discomfort. Find Yourself."
-        description="Amsterdam's urban wellness community. Ice baths, breathwork, and outdoor adventures for those who choose growth over comfort."
-        ctaText="Join Our WhatsApp Community →"
-        ctaHref="https://chat.whatsapp.com/Hgi483zWWtQ3XWt0dBnfnl"
-        secondaryCtaText="See Activities ↓"
-        secondaryCtaHref="#activities"
-        fullHeight
-        photos={[
-          { src: "/media/dc-polaroid-2-dolomites-hike.jpg", alt: "Hiking in the Dolomites" },
-          { src: "/media/dc-polaroid-1-amstel-dip.JPG", alt: "Ice dip at the Amstel" },
-          { src: "/media/dc-biweekly-dip.jpg", alt: "Monthly cold water dip" },
-          { src: "/media/dc-quarterly-excursion.JPG", alt: "Weekend excursion" },
-          { src: "/media/dc-annual-adventure-2.JPG", alt: "Annual adventure hike" },
-          { src: "/media/dc-polaroid-4-dolomites-hike.jpg", alt: "Mountain trail in the Dolomites" },
-          { src: "/media/dc-hero-image-website.png", alt: "Dip Club community" },
-          { src: "/media/dc-polaroid-3-south-africa-hike.jpg", alt: "Coastal hike" },
-        ]}
+      <HomeHero
+        backgroundImage="/media/dc-polaroid-2-dolomites-hike.jpg"
+        backgroundAlt="Dip Club community hiking in the Dolomites"
       />
 
-      {/* Intro Section — extra top padding to accommodate mosaic overflow */}
-      <section className="bg-offwhite pt-36 sm:pt-44 lg:pt-52 pb-24 lg:pb-32">
+      {/* Intro Section */}
+      <section className="bg-offwhite py-24 lg:py-32">
         <div className="mx-auto max-w-[1320px] px-6 lg:px-12">
           <div className="flex flex-col gap-12 lg:flex-row lg:items-center lg:gap-20">
             <ScrollReveal className="flex-1">
