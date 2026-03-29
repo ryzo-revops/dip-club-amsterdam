@@ -53,7 +53,7 @@ export default function HomeHero({
               revealed ? "opacity-100 translate-y-0 delay-500" : "opacity-100 translate-y-0",
             ].join(" ")}
           >
-            DIP CLUB
+            RESET YOUR MIND
           </h1>
 
           <p
