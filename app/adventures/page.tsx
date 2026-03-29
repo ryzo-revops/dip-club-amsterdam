@@ -249,7 +249,7 @@ export default function AdventuresPage() {
                 href="#"
                 className="inline-block rounded-sm bg-offwhite px-8 py-3.5 text-sm font-semibold text-dark hover:scale-[1.02] hover:bg-offwhite/90 transition-all"
               >
-                Sign Up for Next Adventure →
+                Sign Up for Next Adventure ↘
               </a>
               <a
                 href="https://chat.whatsapp.com/Hgi483zWWtQ3XWt0dBnfnl"

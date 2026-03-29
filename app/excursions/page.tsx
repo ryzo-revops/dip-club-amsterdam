@@ -203,7 +203,7 @@ export default function ExcursionsPage() {
                 href="#"
                 className="inline-block rounded-sm bg-offwhite px-8 py-3.5 text-sm font-semibold text-dark hover:scale-[1.02] hover:bg-offwhite/90 transition-all"
               >
-                Sign Up for Next Trip →
+                Sign Up for Next Trip ↘
               </a>
               <a
                 href="https://chat.whatsapp.com/Hgi483zWWtQ3XWt0dBnfnl"

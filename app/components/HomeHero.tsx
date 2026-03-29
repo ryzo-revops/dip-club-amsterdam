@@ -89,13 +89,13 @@ export default function HomeHero({
               rel="noopener noreferrer"
               className="rounded-sm bg-white px-8 py-3.5 text-sm font-semibold text-dark hover:scale-[1.02] hover:bg-white/90 transition-all"
             >
-              Join Our WhatsApp Community →
+              Join Our WhatsApp Community ↘
             </a>
             <a
               href="#activities"
               className="rounded-sm border border-white/40 px-8 py-3.5 text-sm font-semibold text-white hover:bg-white/10 transition-all"
             >
-              See Activities ↓
+              See Activities ↘
             </a>
           </div>
         </div>

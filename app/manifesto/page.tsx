@@ -161,7 +161,7 @@ export default function ManifestoPage() {
               rel="noopener noreferrer"
               className="mt-8 inline-block rounded-sm bg-offwhite px-8 py-3.5 text-sm font-semibold text-dark hover:scale-[1.02] hover:bg-offwhite/90 transition-all"
             >
-              Join WhatsApp Community →
+              Join WhatsApp Community ↘
             </a>
           </ScrollReveal>
         </div>

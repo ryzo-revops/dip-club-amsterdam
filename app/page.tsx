@@ -229,7 +229,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="mt-6 w-fit rounded-sm bg-offwhite px-8 py-3 text-sm font-semibold text-dark hover:scale-[1.02] hover:bg-offwhite/90 transition-all"
                 >
-                  Join WhatsApp →
+                  Join WhatsApp ↘
                 </a>
               </div>
             </ScrollReveal>

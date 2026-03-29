@@ -43,7 +43,7 @@ export default function ActivityCard({
           </div>
           <p className="text-sm text-slate">{description}</p>
           <span className="text-sm font-semibold text-terracotta group-hover:text-terracotta-dark transition-colors mt-1">
-            Learn more →
+            Learn more ↘
           </span>
         </div>
       </article>

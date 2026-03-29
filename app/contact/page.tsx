@@ -37,7 +37,7 @@ export default function ContactPage() {
                   </p>
                 </div>
                 <span className="mt-6 text-sm font-semibold text-terracotta group-hover:text-terracotta-dark transition-colors">
-                  Join Community →
+                  Join Community ↘
                 </span>
               </a>
             </ScrollReveal>
@@ -65,7 +65,7 @@ export default function ContactPage() {
                   </p>
                 </div>
                 <span className="mt-6 text-sm font-semibold text-terracotta group-hover:text-terracotta-dark transition-colors">
-                  @dipclub.ams →
+                  @dipclub.ams ↘
                 </span>
               </a>
             </ScrollReveal>
@@ -90,7 +90,7 @@ export default function ContactPage() {
                   </p>
                 </div>
                 <span className="mt-6 text-sm font-semibold text-terracotta group-hover:text-terracotta-dark transition-colors">
-                  hello@dipclub.nl →
+                  hello@dipclub.nl ↘
                 </span>
               </a>
             </ScrollReveal>
