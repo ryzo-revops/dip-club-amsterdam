@@ -13,7 +13,7 @@ export default function Home() {
       />
 
       {/* Intro Section */}
-      <section className="bg-offwhite bg-wavy py-24 lg:py-32">
+      <section className="bg-offwhite py-24 lg:py-32">
         <div className="mx-auto max-w-[1320px] px-6 lg:px-12">
           <div className="flex flex-col gap-12 lg:flex-row lg:items-center lg:gap-20">
             <ScrollReveal className="flex-1">
@@ -44,7 +44,7 @@ export default function Home() {
       </section>
 
       {/* Our Pillars Section */}
-      <section className="bg-offwhite bg-wavy py-24 lg:py-32 border-t border-dark/5">
+      <section className="bg-offwhite py-24 lg:py-32 border-t border-dark/5">
         <div className="mx-auto max-w-[1320px] px-6 lg:px-12">
           <ScrollReveal>
             <p className="mb-4 text-xs font-semibold uppercase tracking-[0.15em] text-terracotta">
@@ -99,7 +99,7 @@ export default function Home() {
       </section>
 
       {/* Activities Section */}
-      <section id="activities" className="bg-offwhite bg-wavy py-24 lg:py-32 border-t border-dark/5 scroll-mt-20">
+      <section id="activities" className="bg-offwhite py-24 lg:py-32 border-t border-dark/5 scroll-mt-20">
         <div className="mx-auto max-w-[1320px] px-6 lg:px-12">
           <ScrollReveal>
             <h2 className="mb-12 font-heading text-3xl font-extrabold sm:text-4xl lg:text-5xl">
@@ -152,7 +152,7 @@ export default function Home() {
       ]} />
 
       {/* Europe Appreciation Section */}
-      <section className="bg-offwhite bg-wavy py-24 lg:py-32">
+      <section className="bg-offwhite bg-topo py-24 lg:py-32">
         <div className="mx-auto max-w-[1320px] px-6 lg:px-12">
           <div className="flex flex-col gap-12 lg:flex-row lg:items-center lg:gap-20">
             <ScrollReveal className="flex-1 order-2 lg:order-1" delay={0.2}>
@@ -218,7 +218,7 @@ export default function Home() {
               </div>
             </ScrollReveal>
             <ScrollReveal className="flex-1" delay={0.15}>
-              <div className="h-full flex flex-col justify-center rounded-sm border-[6px] border-terracotta bg-terracotta p-8 lg:p-12 text-white">
+              <div className="h-full flex flex-col justify-center rounded-sm border-[6px] border-terracotta bg-terracotta bg-topo-light p-8 lg:p-12 text-white">
                 <h2 className="font-heading text-2xl sm:text-3xl font-extrabold">Join the community</h2>
                 <p className="mt-4 text-base text-white/80">
                   Be the first to know about upcoming dips, excursions, and adventures.
